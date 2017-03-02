@@ -1,4 +1,25 @@
-var cards = ["queen", "king", "queen", "king"];
+var cards = [
+{
+	rank: "queen",
+	suit: "hearts",
+	cardImage: "images/queen-of-hearts.png"
+},
+{
+	rank: "queen",
+	suit: "diamonds",
+	cardImage: "images/queen-of-diamonds.png"
+},
+{
+	rank: "king",
+	suit: "hearts",
+	cardImage: "images/king-of-hearts.png"
+},
+{
+	rank: "king",
+	suit: "diamonds",
+	cardImage: "images/king-of-diamonds.png"
+}
+];
 
 var cardsInPlay = [];
 
@@ -12,9 +33,11 @@ if (cardsInPlay.length === 2 && cardsInPlay[0] === cardsInPlay[1]){
 
 var flipCard = function(cardID){
 	checkForMatch();
-	console.log("User flipped " + cards[cardID]);
-	cardsInPlay.push(cards[cardID]);
+	console.log("User flipped " + cards[cardID].rank);
+	cardsInPlay.push(cards[cardID].rank);
+	console.log(cards[cardID].cardImage);
+	console.log(cards[cardID].suit);
 }
 
 flipCard(0);
-flipCard(1);
+flipCard(2);
